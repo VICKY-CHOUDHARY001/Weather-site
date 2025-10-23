@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Templates/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Global Weather</h1>
+            <div class="search-box">
+    
+                <!-- <input type="text" id="search-input" placeholder="Search city or country..."> -->
+            <select id="countrySelect" name="country">
+    <option value="">Select a Country</option>
+    <option value="AF">Afghanistan</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="US">United States</option>
+    <option value="GB">United Kingdom</option>
+    <option value="CA">Canada</option>
+    <option value="AU">Australia</option>
+    <option value="IN">India</option>
+    <option value="CN">China</option>
+    <option value="JP">Japan</option>
+    <option value="DE">Germany</option>
+    <option value="FR">France</option>
+    <option value="BR">Brazil</option>
+    <option value="RU">Russia</option>
+    <option value="MX">Mexico</option>
+    <option value="ZA">South Africa</option>
+    <option value="EG">Egypt</option>
+    <option value="NG">Nigeria</option>
+    <option value="KE">Kenya</option>   
+    </select>
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <div class="weather-card">
+                <div class="location">
+                    <h2 id="city">--</h2>
+                    <p id="country">--</p>
+                </div>
+                <div class="weather-icon">
+                    <img id="weather-icon" src="assets/weather-icons/01d.png" alt="Weather Icon">
+                </div>
+                <div class="temperature">
+                    <h1 id="temp">--°C</h1>
+                    <p id="description">--</p>
+                </div>
+                <div class="details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-high"></i>
+                        <div>
+                            <p>Feels Like</p>
+                            <p id="feels-like">--°C</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p>Humidity</p>
+                            <p id="humidity">--%</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Wind Speed</p>
+                            <p id="wind">-- km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast-container">
+                    <!-- Forecast cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Data provided by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
